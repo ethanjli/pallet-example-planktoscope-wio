@@ -11,8 +11,10 @@ This Github repository has three release channels, each corresponding to a Git b
 
 You can clone this Pallet environment to your PlanktoScope (or any computer acting as a Docker swarm manager) using [`forklift`](https://github.com/PlanktoScope/forklift). For example, you can run any one of the forklift CLI commands, depending on which release of this Pallet environment you want:
 ```
-forklift env clone github.com/PlanktoScope/pallets-env@edge // clone and track the latest version on the edge branch
-forklift env clone github.com/PlanktoScope/pallets-env@v0.1.0 // clone and track the v0.1.0
+// to clone and track the latest release of the edge branch:
+forklift env clone github.com/PlanktoScope/pallets-env@edge
+// to clone the v0.1.0 release:
+forklift env clone github.com/PlanktoScope/pallets-env@v0.1.0
 ```
 
 Then you can synchronize the Docker swarm stack deployments on your PlanktoScope (or the Docker swarm manager you're running) with your local Pallet environment using the following forklift CLI command:
