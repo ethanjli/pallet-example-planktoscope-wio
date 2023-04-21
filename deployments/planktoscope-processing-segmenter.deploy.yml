@@ -1,1 +1,3 @@
 package: github.com/PlanktoScope/pallets/core/planktoscope-processing-segmenter
+features:
+  - mjpeg-object-stream

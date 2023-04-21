@@ -1,1 +1,3 @@
 package: github.com/PlanktoScope/pallets/testing/nodered-sandbox
+features:
+  - editor

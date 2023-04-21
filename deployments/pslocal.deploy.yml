@@ -1,1 +1,3 @@
 package: github.com/PlanktoScope/pallets/testing/pslocal
+features:
+  - frontend-direct

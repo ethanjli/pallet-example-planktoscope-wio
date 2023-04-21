@@ -1,1 +1,4 @@
 package: github.com/PlanktoScope/pallets/testing/simple-demo
+features:
+  - hello
+  - whoami

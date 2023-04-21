@@ -1,1 +1,5 @@
 package: github.com/PlanktoScope/pallets/core/portainer
+features:
+  - edge-agent-tunnel
+  - frontend
+  - frontend-direct
