@@ -1,11 +1,13 @@
 # pallets-env
-The standard Pallet environment for the PlanktoScope software distribution
+The standard configuration of Pallet package deployments for the PlanktoScope software distribution
 
 ## Introduction
 
-pallet-env is the standard configuration of [Pallet](https://github.com/PlanktoScope/pallets) package deployments for the PlanktoScope software distribution.
+pallets-env is a [Forklift](https://github.com/PlanktoScope/forklift) environment specifying the standard configuration of [Pallet](https://github.com/PlanktoScope/pallets) package deployments for the PlanktoScope software distribution.
 
 ## Usage
+
+### Deployment
 
 This Github repository has three release channels, each corresponding to a Git branch: `stable`, `beta`, and `edge`, as well as Git tags for each released version. You should always use either the `stable` branch (recommended so that you will automatically be notified for new stable versions) or a specific Git tag.
 
@@ -23,6 +25,10 @@ forklift env apply
 ```
 
 Warning: this will replace all Docker stacks on your Docker swarm with the stacks in this Github repository and delete any Docker stacks not specified by the stacks in this Github repository.
+
+### Development
+
+TBD
 
 ## Licensing
 

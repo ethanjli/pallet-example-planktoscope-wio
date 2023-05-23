@@ -1,2 +1,2 @@
 environment:
-  description: Standard Pallet environment for the PlanktoScope software distro
+  description: Standard configuration of Pallet package deployments for the PlanktoScope software distro
