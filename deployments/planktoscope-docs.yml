@@ -1,0 +1,3 @@
+package: github.com/PlanktoScope/pallets/core/planktoscope-docs
+features:
+  - website
