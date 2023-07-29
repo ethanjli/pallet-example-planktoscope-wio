@@ -1,0 +1,3 @@
+package: github.com/PlanktoScope/pallets/core/infrastructure/mosquitto
+features:
+  - mqtt-broker

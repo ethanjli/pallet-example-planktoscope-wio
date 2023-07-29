@@ -28,7 +28,26 @@ Warning: this will replace all Docker stacks on your Docker swarm with the stack
 
 ### Development
 
-TBD
+You should clone this Github repository to your local file system. For example, you can clone the latest unstable version (on the `edge` branch) of the [`github.com/PlanktoScope/pallets-env`](https://github.com/PlanktoScope/pallets-env) environment using the command:
+
+```
+git clone https://github.com/PlanktoScope/pallets-env
+```
+
+Then you will need to download/install forklift. Once you have forklift, you can run subcommands under the `forklift dev env` command; if forklift is in your system path, you can simply run commands within the directory containing your development environment, or any subdirectory of it. For example, if your development environment is at `/home/pi/dev/pallets-env`, you can run the following commands to see some information about your development environment:
+
+```
+cd /home/pi/dev/pallets-env
+forklift dev env show
+```
+
+You can also use the `forklift dev env add-repo` command to add additional Pallet repositories to your development environment, and to change the versions of Pallet repositories already added to your development environment.
+
+You can also run commands like `forklift dev env cache-repo` and `sudo -E forklift dev env apply` (with appropriate values in the `--cwd` flag if necessary) to download the Pallet repositories specified by your development environment into your local cache and deploy the packages provided by those repositories according to the configuration in your development environment. This is useful if, for example, you want to make some experimental changes to your development environment and test them on your local machine before committing and pushing those changes onto GitHub.
+
+Finally, you can run the `forklift dev env check` command to check the environment for any problems, such as resource constraint violations.
+
+For more details and usage information, refer to the [readme for forklift](https://github.com/PlanktoScope/forklift#readme).
 
 ## Licensing
 

@@ -1,0 +1,4 @@
+package: github.com/PlanktoScope/pallets/core/applications/planktoscope-node-red-dashboard
+features:
+  - editor
+  - frontend
