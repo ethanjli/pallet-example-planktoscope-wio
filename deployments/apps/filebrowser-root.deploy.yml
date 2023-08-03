@@ -1,0 +1,3 @@
+package: github.com/PlanktoScope/pallets/core/apps/filebrowser-root
+features:
+  - frontend

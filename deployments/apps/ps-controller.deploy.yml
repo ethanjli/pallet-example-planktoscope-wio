@@ -1,0 +1,3 @@
+package: github.com/PlanktoScope/pallets/core/apps/planktoscope-controller
+features:
+  - camera-preview-stream-mjpeg
