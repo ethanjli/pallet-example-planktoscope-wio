@@ -1,3 +1,3 @@
-package: github.com/PlanktoScope/pallets/core/apps/device-portal
+package: github.com/PlanktoScope/device-pkgs/core/apps/device-portal
 features:
   - frontend

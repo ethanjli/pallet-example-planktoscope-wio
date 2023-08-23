@@ -1,3 +1,3 @@
-package: github.com/PlanktoScope/pallets/core/infra/caddy-ingress
+package: github.com/PlanktoScope/device-pkgs/core/infra/caddy-ingress
 features:
   - service-proxy

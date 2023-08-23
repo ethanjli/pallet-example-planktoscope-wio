@@ -1,4 +1,4 @@
-package: github.com/PlanktoScope/pallets/core/apps/portainer
+package: github.com/PlanktoScope/device-pkgs/core/apps/portainer
 features:
   - frontend
   - frontend-direct

@@ -1,9 +1,9 @@
-# pallets-env
-The standard configuration of Pallet package deployments for the PlanktoScope software distribution
+# pallet-standard
+The standard configuration of Forklift package deployments for PlanktoScopes
 
 ## Introduction
 
-pallets-env is a [Forklift](https://github.com/PlanktoScope/forklift) environment specifying the standard configuration of [Pallet](https://github.com/PlanktoScope/pallets) package deployments for the PlanktoScope software distribution.
+pallet-standard is a [Forklift](https://github.com/PlanktoScope/forklift) pallet specifying the standard configuration of Forklift package deployments for the PlanktoScope software distribution.
 
 ## Usage
 
@@ -11,47 +11,47 @@ pallets-env is a [Forklift](https://github.com/PlanktoScope/forklift) environmen
 
 This Github repository has three release channels, each corresponding to a Git branch: `stable`, `beta`, and `edge`, as well as Git tags for each released version. You should always use either the `stable` branch (recommended so that you will automatically be notified for new stable versions) or a specific Git tag.
 
-You can clone this Pallet environment to your PlanktoScope (or any computer acting as a Docker swarm manager) using [`forklift`](https://github.com/PlanktoScope/forklift). For example, you can run any one of the forklift CLI commands, depending on which release of this Pallet environment you want:
+You can clone this Forklift pallet to your PlanktoScope (or any computer acting as a Docker swarm manager) using [`forklift`](https://github.com/PlanktoScope/forklift). For example, you can run any one of the `forklift` CLI commands, depending on which release of this pallet you want:
 ```
 // to clone and track the latest release of the edge branch:
-forklift env clone github.com/PlanktoScope/pallets-env@edge
-// to clone the v0.1.0 release:
-forklift env clone github.com/PlanktoScope/pallets-env@v0.1.0
+forklift plt clone github.com/PlanktoScope/pallet-standard@edge
+// to clone the v2023.9.0 release:
+forklift plt clone github.com/PlanktoScope/pallet-standard@v2023.9.0
 ```
 
-Then you can synchronize the Docker swarm stack deployments on your PlanktoScope (or the Docker swarm manager you're running) with your local Pallet environment using the following forklift CLI command:
+Then you can apply the cloned pallet on your PlanktoScope (or the Docker host you're running) using the following `forklift` CLI command:
 ```
-forklift env apply
+forklift plt apply
 ```
 
-Warning: this will replace all Docker stacks on your Docker swarm with the stacks in this Github repository and delete any Docker stacks not specified by the stacks in this Github repository.
+Warning: this will replace all Docker containers on your Docker host with the package deployments specified by this pallet and delete any Docker containers not specified by the package deployments specified by this pallet.
 
 ### Development
 
-You should clone this Github repository to your local file system. For example, you can clone the latest unstable version (on the `edge` branch) of the [`github.com/PlanktoScope/pallets-env`](https://github.com/PlanktoScope/pallets-env) environment using the command:
+You should clone this Github repository to your local file system. For example, you can clone the latest unstable version (on the `edge` branch) of the [`github.com/PlanktoScope/pallet-standard`](https://github.com/PlanktoScope/pallet-standard) environment using the command:
 
 ```
-git clone https://github.com/PlanktoScope/pallets-env
+git clone https://github.com/PlanktoScope/pallet-standard
 ```
 
-Then you will need to download/install forklift. Once you have forklift, you can run subcommands under the `forklift dev env` command; if forklift is in your system path, you can simply run commands within the directory containing your development environment, or any subdirectory of it. For example, if your development environment is at `/home/pi/dev/pallets-env`, you can run the following commands to see some information about your development environment:
+Then you will need to download/install `forklift`. Once you have `forklift`, you can run subcommands under the `forklift dev plt` command; if forklift is in your system path, you can simply run commands within the directory containing your development pallet, or any subdirectory of it. For example, if your development pallet is at `/home/pi/dev/pallet-standard`, you can run the following commands to see some information about your development pallet:
 
 ```
-cd /home/pi/dev/pallets-env
-forklift dev env show
+cd /home/pi/dev/pallet-standard
+forklift dev plt show
 ```
 
-You can also use the `forklift dev env add-repo` command to add additional Pallet repositories to your development environment, and to change the versions of Pallet repositories already added to your development environment.
+You can also use the `forklift dev plt add-repo` command to add additional Pallet repositories to your development environment, and to change the versions of Pallet repositories already added to your development environment.
 
-You can also run commands like `forklift dev env cache-repo` and `sudo -E forklift dev env apply` (with appropriate values in the `--cwd` flag if necessary) to download the Pallet repositories specified by your development environment into your local cache and deploy the packages provided by those repositories according to the configuration in your development environment. This is useful if, for example, you want to make some experimental changes to your development environment and test them on your local machine before committing and pushing those changes onto GitHub.
+You can also run commands like `forklift dev plt cache-repo` and `sudo -E forklift dev plt apply` (with appropriate values in the `--cwd` flag if necessary) to download the Forklift repositories specified by your development pallet into your local cache and deploy the packages provided by those repositories according to the configuration in your development pallet. This is useful if, for example, you want to make some experimental changes to your development pallet and test them on your local machine before committing and pushing those changes onto GitHub.
 
-Finally, you can run the `forklift dev env check` command to check the environment for any problems, such as resource constraint violations.
+Finally, you can run the `forklift dev plt check` command to check the environment for any problems, such as resource constraint violations.
 
-For more details and usage information, refer to the [readme for forklift](https://github.com/PlanktoScope/forklift#readme).
+For more details and usage information, refer to the [readme for Forklift](https://github.com/PlanktoScope/forklift#readme).
 
 ## Licensing
 
-Pallet packages specified by this environment have their own software licenses, as specified in the Pallet repositories where those packages are published. Any source code provided here is covered by the following information, except where otherwise indicated:
+Forklift packages specified by this environment have their own software licenses, as specified in the Forklift repositories where those packages are published. Any source code provided with this Forklift pallet is covered by the following information, except where otherwise indicated:
 
 Copyright Ethan Li and PlanktoScope project contributors
 
