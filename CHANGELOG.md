@@ -10,4 +10,4 @@ All dates in this file are given in the [UTC time zone](https://en.wikipedia.org
 
 ### Added
 
-- Repository and package deployment configuration for the v2023.7.0 release
+- Repository and package deployment configuration for the v2023.9.0 release
