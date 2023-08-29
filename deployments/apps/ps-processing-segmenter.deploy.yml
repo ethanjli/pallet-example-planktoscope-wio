@@ -1,3 +1,0 @@
-package: github.com/PlanktoScope/device-pkgs/core/apps/planktoscope-processing-segmenter
-features:
-  - mjpeg-object-stream

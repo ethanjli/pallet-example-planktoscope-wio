@@ -1,4 +1,0 @@
-package: github.com/PlanktoScope/device-pkgs/core/apps/planktoscope-node-red-dashboard
-features:
-  - editor
-  - frontend
