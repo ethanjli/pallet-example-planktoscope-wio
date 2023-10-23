@@ -1,2 +1,6 @@
-environment:
+forklift-version: v0.4.0
+
+pallet:
+  path: github.com/PlanktoScope/pallet-standard
   description: Standard configuration of Pallet package deployments for the PlanktoScope software distro
+  readme-file: README.md
