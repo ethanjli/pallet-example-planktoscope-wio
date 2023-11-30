@@ -12,6 +12,10 @@ All dates in this file are given in the [UTC time zone](https://en.wikipedia.org
 
 - (Breaking change) Updated files for use with v0.4.0 of the Forklift tool. Previous versions must be used with forklift v0.3.
 
+### Removed
+
+- The hardware setup guides are no longer included by default in the offline docs site, to reduce the size of the PlanktoScope SD card images.
+
 ## v2023.9.0-beta.1 - 2023-09-14
 
 ### Changed
