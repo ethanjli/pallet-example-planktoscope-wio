@@ -12,7 +12,7 @@ All dates in this file are given in the [UTC time zone](https://en.wikipedia.org
 
 - Deployment for Dozzle as a Docker container log viewer.
 - Deployments for Prometheus metrics monitoring.
-- Deployments for various scripts to make available for running on the host.
+- Deployments for various scripts - and a few config files - to make available for running on the host.
 
 ### Changed
 
