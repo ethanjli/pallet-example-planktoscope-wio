@@ -8,6 +8,14 @@ All dates in this file are given in the [UTC time zone](https://en.wikipedia.org
 
 ## Unreleased
 
+### Added
+
+- Added deployments for a few new packages which only describe assumptions about files provided by the host.
+
+### Changed
+
+- Upgraded packages so that some now require certain files to be provided by the host.
+
 ## v2024.0.0-alpha.0 - 2024-02-06
 
 ### Added
