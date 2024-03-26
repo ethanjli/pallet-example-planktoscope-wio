@@ -1,4 +1,4 @@
-type: pseudoversion
-tag: v2024.0.0-alpha.0
-timestamp: "20240315212252"
-commit: a44a699f7e3a087adf4ea64be296e1f4014cf7d5
+type: version
+tag: v2024.0.0-alpha.1
+timestamp: "20240326225545"
+commit: e643b1e64584094dc176c6b6ed2ac3c52baf5075
