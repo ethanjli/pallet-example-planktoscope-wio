@@ -6,6 +6,35 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project uses [Calendar Versioning](https://calver.org/) with a `YYYY.minor.patch` scheme.
 All dates in this file are given in the [UTC time zone](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
 
+## Unreleased
+
+### Added
+
+- Deployment `apps/cockpit` now exports a drop-in config file for reverse-proxying (see the notes on additions to `core/host/cockpit`)
+- Deployment `apps/ps/node-red-dashboard` now exports more config files needed for the Node-RED dashboard.
+- Deployment `host/cockpit` now exports system services to automatically generate a Cockpit config file from drop-in config file fragments, and various drop-in config files for Cockpit.
+- Deployment `host/dnsmasq` now exports system services to automatically generate a dnsmasq drop-in config file from drop-in config file templates.
+- Added a `host/docker` deployment which exports an override to the default systemd `docker.service`.
+- Deployment `host/networking/autohotspot` now exports everything needed for autohotspot functionality.
+- Deployment `host/networking/dhcpcd` now exports an override to the default systemd `dhcpcd.service`.
+- Deployment `host/networking/dnsmasq` now exports various drop-in config files for dnsmasq.
+- Deployment `host/networking/hostapd` now exports a default basic config file for hostapd.
+- Deployment `host/networking/hosts` now exports system services to automatically generate a hosts file from drop-in hosts file fragments.
+- Deployment `host/networking/interface-forwarding` now exports everything needed for interface-forwarding functionality.
+- Deployment `host/planktoscope/gpio-init` now exports everything needed for GPIO-initialization functionality.
+- Deployment `host/planktoscope/gpsd` now exports all config files needed to support the GPS module (still no guarantee whether the files are actually correct, though!).
+- Deployment `host/planktoscope/machine-name` now exports everything needed for automatically updating machine name-related configurations (machine name, hostname, SSID, Cockpit configuration).
+- Deployment `host/sshd` now enables the system-provided `ssh.service` and adds & enables a service which automatically regenerates host keys for the SSH server if no host keys exist at boot.
+
+### Changed
+
+- (Breaking change) The minimum supported Forklift version for using this repository has been bumped from v0.4.0 to v0.7.0-alpha.3, because some packages provided by this repository now require functionality added by v0.7.0 (namely, file-exporting functionality) in order to work as described/expected.
+- (Breaking change) Deployment `host/planktoscope/machine-name` has been renamed to `host/machine-name`.
+
+### Removed
+
+- Deployment `apps/cockpit/deploy.yml` no longer has a resource dependency on a fileset involving `/etc/cockpit/cockpit.conf`.
+
 ## v2024.0.0-alpha.1 - 2024-03-26
 
 ### Added
