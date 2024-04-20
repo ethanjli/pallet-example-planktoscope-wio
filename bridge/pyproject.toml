@@ -22,8 +22,8 @@ priority = "primary"
 [tool.poetry.dependencies]
 python = "^3.9"
 paho-mqtt = [
-  { version = "~1.6.1", source = "pypi", markers = "platform_machine != 'armv7l'" },
-  { version = "~1.6.1", source = "piwheels", markers = "platform_machine == 'armv7l'" },
+  { version = "~2.0.0", source = "pypi", markers = "platform_machine != 'armv7l'" },
+  { version = "~2.0.0", source = "piwheels", markers = "platform_machine == 'armv7l'" },
 ]
 pyserial = [
   { version = "~3.5", source = "pypi", markers = "platform_machine != 'armv7l'" },

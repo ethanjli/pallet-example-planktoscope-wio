@@ -29,7 +29,17 @@ Run:
 forklift plt switch github.com/ethanjli/pallet-example-planktoscope-wio@main
 ```
 
-Then reboot your PlanktoScope.
+Then plug in your Wio Terminal to your PlanktoScope and run:
+
+```
+forklift stage apply
+```
+
+Warning: if the Wio Terminal before you run `forklift stage apply`, this pallet will not be
+successfully applied. Similarly, if the Wio Terminal is not plugged in at boot, then the pallet will
+not be completely applied at boot, and the staged apply will be marked as having failed to be
+applied - it will only complete successfully if `/dev/ttyACM0` exists by the time Forklift tries to
+apply the pallet as part of the boot process.
 
 This pallet will cause your PlanktoScope to also run a program which writes text to `/dev/ttyACM0`.
 If you plug in a [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) running the
