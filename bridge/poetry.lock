@@ -14,6 +14,24 @@ files = [
 proxy = ["PySocks"]
 
 [[package]]
+name = "paho-mqtt"
+version = "1.6.1"
+description = "MQTT version 5.0/3.1.1 client class"
+optional = false
+python-versions = "*"
+files = [
+    {file = "paho_mqtt-1.6.1-py3-none-any.whl", hash = "sha256:c44b3dd1b298894c44e3e842f7b0ca3ebe01f628a6f229c881b2324613d7bba7"},
+]
+
+[package.extras]
+proxy = ["PySocks"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "pyserial"
 version = "3.5"
 description = "Python Serial Port Extension"
@@ -27,7 +45,25 @@ files = [
 [package.extras]
 cp2110 = ["hidapi"]
 
+[[package]]
+name = "pyserial"
+version = "3.5"
+description = "Python Serial Port Extension"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"},
+]
+
+[package.extras]
+cp2110 = ["hidapi"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "88ed4a0fe18a94da3db5dba10dfdba125394bf3b71b273d74edb2536e200da1d"
+content-hash = "4621fdee1286c2ad0c3834ae2aa2aa2cfe9ce02f552ea758c36bec9d98046e27"

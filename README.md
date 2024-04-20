@@ -1,5 +1,6 @@
 # pallet-example-wio
-A simple Forklift pallet illustrating a minimal pallet structure
+A Forklift pallet demo with a software add-on to the PlanktoScope's standard pallet, for an
+additional hardware module.
 
 ## Introduction
 
