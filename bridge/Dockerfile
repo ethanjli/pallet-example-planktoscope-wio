@@ -29,4 +29,4 @@ RUN \
 # Note: we must explicitly set chown if we drop root, or else files will be copied with root
 # permissions.
 COPY --chown=pi:pi main.py .
-ENTRYPOINT ["/usr/local/bin/poetry", "run", "python", "-m", "main"]
+ENTRYPOINT ["/usr/local/bin/poetry", "run", "python", "-u", "-m", "main"]
