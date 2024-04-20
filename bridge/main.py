@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-print("starting!")
-
 import time
 
 import paho.mqtt.client as mqtt
@@ -26,4 +24,5 @@ if __name__ == "__main__":
 
     print("connecting to mqtt...")
     mqttc.connect("host.docker.internal", 1883, 60)
+    # mqttc.connect("localhost", 1883, 60)
     mqttc.loop_forever()
