@@ -1,12 +1,12 @@
-# pallet-example-wio
+# pallet-example-planktoscope-wio
 A Forklift pallet demo with a software add-on to the PlanktoScope's standard pallet, for an
 additional hardware module.
 
 ## Introduction
 
-pallet-example-wio is a [Forklift](https://github.com/ethanjli/pallet-example-wio) pallet
-which adds an add-on to
-[github.com/PlanktoScope/pallet-standard](https://github.com/PlanktoScope/pallet-standard); the
+pallet-example-planktoscope-wio is a
+[Forklift](https://github.com/ethanjli/pallet-example-planktoscope-wio) pallet which adds an add-on
+to [github.com/PlanktoScope/pallet-standard](https://github.com/PlanktoScope/pallet-standard); the
 add-on listens for MQTT messages over the PlanktoScope API and sends text to `/dev/ttyACM0`,
 which ideally should be a USB device that receives and prints serial data.
 
@@ -26,7 +26,7 @@ the PlanktoScope OS, or a later version.
 Run:
 
 ```
-forklift plt switch github.com/ethanjli/pallet-example-wio@main
+forklift plt switch github.com/ethanjli/pallet-example-planktoscope-wio@main
 ```
 
 Then reboot your PlanktoScope.
