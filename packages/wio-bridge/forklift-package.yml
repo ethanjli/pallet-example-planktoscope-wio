@@ -1,0 +1,11 @@
+package:
+  description: Bridge between the PlanktoScope's MQTT API and a serial device such as a Wio Terminal
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: Apache-2.0 OR BlueOak-1.0.0
+  sources:
+    - https://github.com/ethanjli/pallet-example-planktoscope-wio
+
+deployment:
+  compose-files: [compose.yml]

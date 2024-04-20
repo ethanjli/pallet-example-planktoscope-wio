@@ -8,6 +8,9 @@ on:
       - 'stable'
     tags:
       - 'bridge/v*'
+    paths:
+      - '.github/workflows/*.yml'
+      - 'bridge/*'
   pull_request:
   merge_group:
   workflow_dispatch:
