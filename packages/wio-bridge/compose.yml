@@ -1,5 +1,7 @@
 services:
   bridge:
-    image: ghcr.io/ethanjli/pallet-example-planktoscope-wio-bridge:sha-a21f939
+    image: ghcr.io/ethanjli/pallet-example-planktoscope-wio-bridge:sha-ce5147e
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
+    extra_hosts:
+      - host.docker.internal:host-gateway
