@@ -5,3 +5,5 @@ services:
       - "/dev/ttyACM0:/dev/ttyACM0"
     extra_hosts:
       - host.docker.internal:host-gateway
+    environment:
+      - PYTHONUNBUFFERED=1
