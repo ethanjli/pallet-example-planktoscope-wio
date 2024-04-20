@@ -1,91 +1,53 @@
-# pallet-standard
-The standard configuration of Forklift package deployments for PlanktoScopes
+# pallet-example-wio
+A simple Forklift pallet illustrating a minimal pallet structure
 
 ## Introduction
 
-pallet-standard is a [Forklift](https://github.com/PlanktoScope/forklift) pallet specifying the
-standard configuration of Forklift package deployments for the PlanktoScope software distribution.
+pallet-example-wio is a [Forklift](https://github.com/ethanjli/pallet-example-wio) pallet
+which adds an add-on to
+[github.com/PlanktoScope/pallet-standard](https://github.com/PlanktoScope/pallet-standard); the
+add-on listens for MQTT messages over the PlanktoScope API and sends text to `/dev/ttyACM0`,
+which ideally should be a USB device that receives and prints serial data.
+
+Currently, this pallet is a fork of PlanktoScope/pallet-standard; in the future, once
+Forklift implements functionality for layering of pallets, this pallet will be layered over
+PlanktoScope/pallet-standard
 
 ## Usage
 
+### Prerequisites
+
+You will need to run this pallet on a PlanktoScope running the v2024.0.0-beta.0 version of
+the PlanktoScope OS, or a later version.
+
 ### Deployment
 
-This Github repository has three release channels, each corresponding to a Git branch: `stable`,
-`beta`, and `edge`, as well as Git tags for each released version. You should probably use either
-the `stable` branch (recommended so that you will automatically be notified for new stable versions)
-or a specific Git tag.
-
-You can clone and stage this Forklift pallet to be applied to your PlanktoScope using the
-[`forklift`](https://github.com/PlanktoScope/forklift) tool. For example, you can run any
-of the following `forklift` CLI commands, depending on which release of this pallet you want:
-```
-// to clone the latest development (unstable) version of the edge branch:
-forklift plt switch github.com/PlanktoScope/pallet-standard@edge
-// to clone the latest beta or stable (pre-)release of the edge branch:
-forklift plt switch github.com/PlanktoScope/pallet-standard@beta
-// to clone the latest stable release of the edge branch:
-forklift plt switch github.com/PlanktoScope/pallet-standard@stable
-// to clone the v2023.9.0 release:
-forklift plt switch github.com/PlanktoScope/pallet-standard@v2023.9.0
-```
-
-Afterwards, your pallet will be staged to be applied the next time your PlanktoScope boots up. To
-apply your changes, you just need to reboot your PlanktoScope. Warning: when you reboot your
-Planktoscope, Forklift will replace all Docker containers on your Docker host according to the
-package deployments specified by this pallet and delete any Docker containers not specified by this
-pallet's package deployments. Forklift will also update your OS's configuration files according to
-the package deployments specified by this pallet - though if you've manually made changes to any
-OS configuration files which overlap with files provided by this pallet, your manually-changed
-versions of those files will completely override this pallet's versions of those files (see TBD for
-more information).
-
-### Layering
-
-TBD
-
-### Development
-
-You should clone this Github repository to your local file system (on either your PlanktoScope's
-embedded computer or another computer). For example, you can clone the latest unstable version (on
-the `edge` branch) of this pallet using the command:
+Run:
 
 ```
-git clone https://github.com/PlanktoScope/pallet-standard
+forklift plt switch github.com/ethanjli/pallet-example-wio@main
 ```
 
-Then you will need to download/install `forklift` in order to run its commands for development. For
-more details and usage information, refer to the
-[readme for Forklift](https://github.com/PlanktoScope/forklift#readme), especially the
-["Work on a development pallet"](https://github.com/PlanktoScope/forklift#work-on-a-development-pallet)
-section of that readme's usage instructions. If you are performing development tasks on your
-PlanktoScope, `forklift` is already installed for you.
+Then reboot your PlanktoScope.
 
-The most common routine maintenance task will be to upgrade the version of the
-[`github.com/PlanktoScope/device-pkgs`](https://github.com/PlanktoScope/device-pkgs) repository used
-by this pallet. You can do that using a command like the following:
+This pallet will cause your PlanktoScope to also run a program which writes text to `/dev/ttyACM0`.
+If you plug in a [Wio Terminal](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) running the
+Arduino sketch in the `wio-firmware` subdirectory, then each time you use the Node-RED dashboard to
+start or stop the pump, the Wio Terminal should print a message indicating the action you took.
 
-```
-forklift dev --cwd {path to your local copy of the pallet for development} plt add-repo github.com/PlanktoScope/device-pkgs@{version to upgrade to}
-```
+### Forking
 
-If you are your PlanktoScope's embedded computer to perform development tasks and you want to
-immediately test changes to the Docker apps provided by the your local development copy of this
-pallet, you can run:
-
-```
-forklift dev --cwd {path to your local copy of the pallet for development} plt apply
-```
-
-Note: any changes made to your OS's configuration files in `/etc` and `/var` will only take effect
-the next time you boot up your PlanktoScope - to test those changes, reboot your PlanktoScope.
+To make your own copy of this repository for experimentation, you should fork this repository to a
+new repository. Then, update the `path` fields of the `forklift-pallet.yml` and
+`forklift-repository.yml` files to match the path of your new repository.
 
 ## Licensing
 
 Forklift packages deployed by this pallet have their own software licenses, as specified in the
-Forklift repositories where those packages are published. Any source code provided with this
-Forklift pallet is covered by the following information, except where otherwise indicated:
+definitions of those packages. Any source code provided with this Forklift pallet is covered by the
+following information, except where otherwise indicated:
 
-Copyright Ethan Li and PlanktoScope project contributors
+Copyright Ethan Li and Forklift project contributors
 
 SPDX-License-Identifier: Apache-2.0 OR BlueOak-1.0.0
 

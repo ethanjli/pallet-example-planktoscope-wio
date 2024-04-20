@@ -1,6 +1,8 @@
 forklift-version: v0.7.0-alpha.3
 
 pallet:
-  path: github.com/PlanktoScope/pallet-standard
-  description: Standard configuration of Forklift package deployments for the PlanktoScope software distro
+  path: github.com/ethanjli/pallet-example-planktoscope-wio
+  description:
+    Deployment of the PlanktoScope's standard pallet, but also with an add-on to integrate with a
+    Wio Terminal
   readme-file: README.md

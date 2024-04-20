@@ -1,0 +1,6 @@
+forklift-version: v0.7.0-alpha.3
+
+repository:
+  path: github.com/ethanjli/pallet-example-planktoscope-wio
+  description: Example packages for a PlanktoScope add-on to integrate with a Wio Terminal
+  readme-file: README.md
