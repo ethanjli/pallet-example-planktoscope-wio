@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+print("starting!")
+
 import time
 
 import paho.mqtt.client as mqtt
@@ -7,7 +9,7 @@ import serial
 
 def on_connect(client, userdata, flags, reason_code, properties):
     print("connected!")
-    client.subscribe("/#")
+    client.subscribe("#")
 
 def make_on_message(ser):
     def on_message(client, userdata, msg):
