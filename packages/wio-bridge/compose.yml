@@ -1,6 +1,6 @@
 services:
   bridge:
-    image: ghcr.io/ethanjli/pallet-example-planktoscope-wio-bridge:sha-75f7451
+    image: ghcr.io/ethanjli/pallet-example-planktoscope-wio-bridge:sha-ae901d9
     devices:
       - "/dev/ttyACM0:/dev/ttyACM0"
     extra_hosts:
